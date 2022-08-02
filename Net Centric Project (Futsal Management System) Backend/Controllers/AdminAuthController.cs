@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
 using Net_Centric_Project__Futsal_Management_System__Backend.DTOs;
 using System.IdentityModel.Tokens.Jwt;
@@ -33,9 +34,20 @@ namespace Net_Centric_Project__Futsal_Management_System__Backend.Controllers
             admin.Email = request.Email;
             admin.PasswordHash = passwordHash;
             admin.PasswordSalt = passwordSalt;
+         
 
-            dbContext.Admins.Add(admin);
-            await dbContext.SaveChangesAsync();
+            try
+            {
+                await dbContext.Admins.AddAsync(admin);
+                await dbContext.SaveChangesAsync();
+            }
+            catch(Exception err)
+            {
+                if (err.InnerException.Message.Contains("duplicate"))
+                {
+                    return BadRequest("The Email Has Already Been Taken");
+                }
+            }
             return Ok(admin);
         }
 
