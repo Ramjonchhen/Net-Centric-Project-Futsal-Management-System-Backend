@@ -261,3 +261,8 @@ F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Proje
 F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\obj\Debug\net6.0\ref\Net Centric Project (Futsal Management System) Backend.dll
 F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\DotNetEnv.dll
 F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Sprache.dll
+F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Scrutor.dll
+F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+F:\.net\Net Centric Project (Futsal Management System) Backend\Net Centric Project (Futsal Management System) Backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
