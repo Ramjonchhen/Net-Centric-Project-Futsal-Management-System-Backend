@@ -12,8 +12,8 @@ using Net_Centric_Project__Futsal_Management_System__Backend.Models;
 namespace Net_Centric_Project__Futsal_Management_System__Backend.Migrations
 {
     [DbContext(typeof(FutsalManagementDBContext))]
-    [Migration("20220728094116_Inital-Migration")]
-    partial class InitalMigration
+    [Migration("20220806064750_First-Migration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,13 @@ namespace Net_Centric_Project__Futsal_Management_System__Backend.Migrations
             modelBuilder.Entity("Net_Centric_Project__Futsal_Management_System__Backend.Models.Admin", b =>
                 {
                     b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"), 1L, 1);
+
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
@@ -44,7 +48,10 @@ namespace Net_Centric_Project__Futsal_Management_System__Backend.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.HasKey("AdminId", "Email");
+                    b.HasKey("AdminId");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Admins");
                 });
